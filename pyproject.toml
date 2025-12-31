@@ -1,0 +1,25 @@
+[project]
+name = "ulip"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "easydict",
+    "ftfy",
+    "h5py",
+    "knn-cuda",
+    "lmdb",
+    "ninja",
+    "open-clip-torch",
+    "open3d",
+    "pyyaml-env-tag",
+    "regex",
+    "termcolor",
+    "timm",
+    "torch",
+    "wandb",
+]
+
+[tool.uv.sources]
+knn-cuda = { url = "https://github.com/unlimblue/KNN_CUDA/releases/download/0.2/KNN_CUDA-0.2-py3-none-any.whl" }
