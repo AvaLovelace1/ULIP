@@ -5,6 +5,7 @@ description = "Add your description here"
 readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [
+    "chamfer-dist",
     "easydict",
     "ftfy",
     "h5py",
@@ -13,6 +14,8 @@ dependencies = [
     "ninja",
     "open-clip-torch",
     "open3d",
+    "openpoints",
+    "pointnet2-batch",
     "pyyaml-env-tag",
     "regex",
     "termcolor",
@@ -21,5 +24,18 @@ dependencies = [
     "wandb",
 ]
 
+[tool.uv]
+no-build-isolation-package = ["pointnet2-batch", "openpoints"]
+
 [tool.uv.sources]
 knn-cuda = { url = "https://github.com/unlimblue/KNN_CUDA/releases/download/0.2/KNN_CUDA-0.2-py3-none-any.whl" }
+openpoints = { workspace = true, editable = true }
+pointnet2-batch = { workspace = true, editable = true }
+chamfer-dist = { workspace = true, editable = true }
+
+[tool.uv.workspace]
+members = [
+    "models/pointnext/openpoints/src/openpoints/cpp/pointnet2_batch",
+    "models/pointnext/openpoints",
+    "models/pointnext/openpoints/src/openpoints/cpp/chamfer_dist",
+]

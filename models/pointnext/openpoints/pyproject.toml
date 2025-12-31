@@ -1,0 +1,29 @@
+[project]
+name = "openpoints"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "cython",
+    "deepspeed",
+    "gdown",
+    "matplotlib",
+    "multimethod",
+    "pandas",
+    "pickleshare",
+    "protobuf",
+    "pyvista",
+    "pyyaml",
+    "scikit-learn",
+    "setuptools",
+    "shortuuid",
+    "tensorboard",
+    "torch",
+    "torchvision",
+    "torch-scatter",
+    "tqdm",
+]
+
+[tool.uv]
+no-build-isolation-package = ["torch-scatter"]
