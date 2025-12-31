@@ -441,7 +441,7 @@ def test_zeroshot_3d_core(test_loader, model, tokenizer, args=None):
     return {'acc1': top1.avg, 'acc5': top5.avg}
 
 def test_zeroshot_3d(args):
-    ckpt = torch.load(args.test_ckpt_addr, map_location='cpu')
+    ckpt = torch.load(args.test_ckpt_addr, map_location='cpu', weights_only=False)
     state_dict = OrderedDict()
     for k, v in ckpt['state_dict'].items():
         state_dict[k.replace('module.', '')] = v
