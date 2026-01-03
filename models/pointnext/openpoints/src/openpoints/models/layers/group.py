@@ -153,7 +153,7 @@ class GatherOperation(Function):
 
         B, npoint = idx.size()
         _, C, N = features.size()
-        output = torch.cuda.FloatTensor(B, C, npoint, device=features.device)
+        output = torch.zeros((B, C, npoint), device=features.device)
 
         pointnet2_cuda.gather_points_wrapper(B, C, N, npoint, features, idx, output)
 

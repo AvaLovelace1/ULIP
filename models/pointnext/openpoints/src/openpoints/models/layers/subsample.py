@@ -88,10 +88,8 @@ class FurthestPointSampling(Function):
         assert xyz.is_contiguous()
 
         B, N, _ = xyz.size()
-        # output = torch.cuda.IntTensor(B, npoint, device=xyz.device)
-        # temp = torch.cuda.FloatTensor(B, N, device=xyz.device).fill_(1e10)
-        output = torch.cuda.IntTensor(B, npoint)
-        temp = torch.cuda.FloatTensor(B, N).fill_(1e10)
+        output = torch.zeros((B, npoint), dtype=torch.int, device='cuda')
+        temp = torch.zeros((B, N), device='cuda').fill_(1e10)
 
         pointnet2_cuda.furthest_point_sampling_wrapper(
             B, N, npoint, xyz, temp, output)
