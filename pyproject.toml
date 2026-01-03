@@ -18,6 +18,7 @@ dependencies = [
     "pointnet2-batch",
     "pyyaml-env-tag",
     "regex",
+    "rich",
     "termcolor",
     "timm",
     "torch",
@@ -38,4 +39,9 @@ members = [
     "models/pointnext/openpoints/src/openpoints/cpp/pointnet2_batch",
     "models/pointnext/openpoints",
     "models/pointnext/openpoints/src/openpoints/cpp/chamfer_dist",
+]
+
+[dependency-groups]
+dev = [
+    "black",
 ]

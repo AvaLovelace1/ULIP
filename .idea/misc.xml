@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="Black">
-    <option name="sdkName" value="Python 3.8" />
+    <option name="enabledOnReformat" value="true" />
+    <option name="sdkName" value="uv (ULIP)" />
   </component>
   <component name="ProjectRootManager" version="2" project-jdk-name="uv (ULIP)" project-jdk-type="Python SDK" />
 </project>
