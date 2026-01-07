@@ -21,7 +21,7 @@ def parse_args() -> argparse.Namespace:
         "--input_path",
         type=str,
         required=True,
-        help="Path to the input JSON file containing data to encode",
+        help="Path to the input folder or JSON file containing data to encode",
     )
     parser.add_argument(
         "--input_type",
